@@ -25,9 +25,10 @@ public class Post_Service {
   public Post_Entity updatePost(long id, Post_Entity updatedPost) {
     Post_Entity existingPost = postRepository.findById(id).orElse(null);
     if (existingPost != null) {
-      existingPost.setTitle(updatedPost.getTitle());
-      existingPost.setContent(updatedPost.getContent());
-      existingPost.setAuthor(updatedPost.getAuthor());
+      existingPost.setName(updatedPost.getName());
+      existingPost.setDescription(updatedPost.getDescription());
+      existingPost.setCharacterType(updatedPost.getCharacterType());
+      existingPost.setUniverse(updatedPost.getUniverse());
       return postRepository.save(existingPost);
     }
     return null;
