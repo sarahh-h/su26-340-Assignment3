@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class PostwEntity {
+public class Post_Entity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)   //autoincrement
@@ -41,7 +41,7 @@ public class PostwEntity {
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm")     //keeping time for fun
   private LocalDateTime createdAt;
 
-  public PostwEntity(String title, String content, String author) {
+  public Post_Entity(String title, String content, String author) {
     this.name = name;
     this.characterType = characterType;
     this.description = description;

@@ -49,8 +49,8 @@ public class Post_APIController {
   }
 
   @PutMapping("/{id}") //left off here
-  public ResponseEntity<Post> updatePost(@PathVariable long id, @RequestBody Post updatedPost) {
-    Post post = postService.updatePost(id, updatedPost);
+  public ResponseEntity<Post_Entity> updatePost(@PathVariable long id, @RequestBody Post_Entity updatedPost) {
+    Post_Entity post = postService.updatePost(id, updatedPost);
     if (post != null) {
       return ResponseEntity.ok(post);
     } else {
@@ -69,14 +69,14 @@ public class Post_APIController {
   }
 
   @GetMapping("/search")
-  public ResponseEntity<List<Post>> searchPosts(@RequestParam String query) {
-    List<Post> posts = postService.searchPosts(query);
+  public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
+    List<Post_Entity> posts = postService.searchPosts(query);
     return ResponseEntity.ok(posts);
   }
 
   @GetMapping("/author")
-  public ResponseEntity<List<Post>> getPostsByAuthor(@RequestParam String name) {
-    List<Post> posts = postService.getPostsByAuthor(name);
+  public ResponseEntity<List<Post_Entity>> getPostsByAuthor(@RequestParam String name) {
+    List<Post_Entity> posts = postService.getPostsByAuthor(name);
     return ResponseEntity.ok(posts);
   }
 
