@@ -75,7 +75,7 @@ public class Post_APIController {
     return ResponseEntity.ok(posts);
   }
 
-    @GetMapping //
+    @GetMapping("/characterType")
      public ResponseEntity<List<Post_Entity>> getPostsByCharacterType(@RequestParam String characterType) {   //getting all characters with the same characterType
         List<Post_Entity> posts = postService.getAllPosts();
         for (Post_Entity post : posts) {
