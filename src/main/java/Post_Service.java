@@ -42,12 +42,12 @@ public class Post_Service {
     return false;
   }
 
-  public List<Post_Entity> searchPosts(String keyword) {
-    return postRepository.findByTitleContainingIgnoreCaseOrContentContainingIgnoreCase(keyword, keyword);
-  }
+  /*public List<Post_Entity> searchPosts(String keyword) {
+    return postRepository.findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(keyword, keyword);
+  } not needed anymore*/
 
-  public List<Post_Entity> getPostsByAuthor(String author) {
-    return postRepository.findByAuthorContainingIgnoreCase(author);
+  public List<Post_Entity> getPostsByName(String a) {
+    return postRepository.findByNameContainingIgnoreCase(a);
   }
 
 }

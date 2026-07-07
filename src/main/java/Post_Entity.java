@@ -41,7 +41,7 @@ public class Post_Entity {
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm")     //keeping time for fun
   private LocalDateTime createdAt;
 
-  public Post_Entity(String title, String content, String author) {
+  public Post_Entity(String name, String description, String characterType, String universe) {
     this.name = name;
     this.characterType = characterType;
     this.description = description;
