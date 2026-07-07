@@ -1,3 +1,4 @@
+package com.csc340HW3.assignmnet3;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
