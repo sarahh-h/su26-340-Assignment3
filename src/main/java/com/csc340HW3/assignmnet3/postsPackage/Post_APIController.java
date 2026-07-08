@@ -1,6 +1,5 @@
 package com.csc340HW3.assignmnet3.postsPackage;
 import java.util.List;
-import java.util.Collections;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -81,22 +80,17 @@ public class Post_APIController {
         return ResponseEntity.ok(posts);
     }
 
-  @GetMapping("/search")                          //searches through everything
+ @GetMapping("/search")
   public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
     List<Post_Entity> posts = postService.searchPosts(query);
-    if (posts.isEmpty()) {
-      return ResponseEntity.ok(Collections.emptyList());
-    }
     return ResponseEntity.ok(posts);
   }
 
-  @GetMapping("/name")        //get all by name
-  public ResponseEntity<List<Post_Entity>> getPostsByName(@RequestParam String name) {
+  @GetMapping("/author")
+  public ResponseEntity<List<Post_Entity>> getPostsByAuthor(@RequestParam String name) {
     List<Post_Entity> posts = postService.getPostsByName(name);
-    if (posts.isEmpty()) {
-      return ResponseEntity.ok(Collections.emptyList());
-    }
     return ResponseEntity.ok(posts);
   }
+
 
 }
