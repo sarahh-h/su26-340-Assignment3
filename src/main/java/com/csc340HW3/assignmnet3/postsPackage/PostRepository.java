@@ -7,8 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PostRepository extends JpaRepository<Post_Entity, Long> {
   
-  List<Post_Entity> findByNameContainingIgnoreCaseOrContentContainingIgnoreCase(String keyword1, String keyword2);
+ //List<Post_Entity> findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(String nameKeyword, String descriptionKeyword); not needed
 
-  List<Post_Entity> findByNameContainingIgnoreCase(String n);
+  List<Post_Entity> findByNameContainingIgnoreCase(String nameKeyword); //to search by name
+//repository 
 
 }

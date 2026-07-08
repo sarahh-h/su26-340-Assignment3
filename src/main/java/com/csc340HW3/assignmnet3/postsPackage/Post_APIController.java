@@ -80,14 +80,8 @@ public class Post_APIController {
         return ResponseEntity.ok(posts);
     }
 
- @GetMapping("/search")
-  public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
-    List<Post_Entity> posts = postService.searchPosts(query);
-    return ResponseEntity.ok(posts);
-  }
-
-  @GetMapping("/author")
-  public ResponseEntity<List<Post_Entity>> getPostsByAuthor(@RequestParam String name) {
+@GetMapping("/name")    //getting characters whose name contains a string
+  public ResponseEntity<List<Post_Entity>> getPostsByName(@RequestParam String name) {
     List<Post_Entity> posts = postService.getPostsByName(name);
     return ResponseEntity.ok(posts);
   }
