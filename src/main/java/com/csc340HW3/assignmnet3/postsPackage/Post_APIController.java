@@ -1,5 +1,6 @@
 package com.csc340HW3.assignmnet3.postsPackage;
 import java.util.List;
+import java.util.Collections;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -69,15 +70,9 @@ public class Post_APIController {
     }
   }
 
-  @GetMapping("/name")    //getting characters whose name contains a string
-  public ResponseEntity<List<Post_Entity>> getPostsByName(@RequestParam String name) {
-    List<Post_Entity> posts = postService.getPostsByName(name);
-    return ResponseEntity.ok(posts);
-  }
-
     @GetMapping("/characterType")
      public ResponseEntity<List<Post_Entity>> getPostsByCharacterType(@RequestParam String characterType) {   //getting all characters with the same characterType
-        List<Post_Entity> posts = postService.getAllPosts();
+        List<Post_Entity> posts = postService.getAllPosts();                                            //I also think that this is wrong
         for (Post_Entity post : posts) {
             if(!post.getCharacterType().equalsIgnoreCase(characterType)){
                 posts.remove(post);
@@ -85,4 +80,23 @@ public class Post_APIController {
         }
         return ResponseEntity.ok(posts);
     }
+
+  @GetMapping("/search")                          //searches through everything
+  public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
+    List<Post_Entity> posts = postService.searchPosts(query);
+    if (posts.isEmpty()) {
+      return ResponseEntity.ok(Collections.emptyList());
+    }
+    return ResponseEntity.ok(posts);
+  }
+
+  @GetMapping("/name")        //get all by name
+  public ResponseEntity<List<Post_Entity>> getPostsByName(@RequestParam String name) {
+    List<Post_Entity> posts = postService.getPostsByName(name);
+    if (posts.isEmpty()) {
+      return ResponseEntity.ok(Collections.emptyList());
+    }
+    return ResponseEntity.ok(posts);
+  }
+
 }
