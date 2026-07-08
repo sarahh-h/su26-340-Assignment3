@@ -47,7 +47,7 @@ public class Post_Service {
     return postRepository.findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(keyword1, keyword1);
   }
 
-  public List<Post_Entity> getPostsByAuthor(String n) {
+  public List<Post_Entity> getPostsByName(String n) {
     return postRepository.findByNameContainingIgnoreCase(n);
   }
 

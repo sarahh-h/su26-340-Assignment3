@@ -69,17 +69,6 @@ public class Post_APIController {
     }
   }
 
-    @GetMapping("/characterType")
-     public ResponseEntity<List<Post_Entity>> getPostsByCharacterType(@RequestParam String characterType) {   //getting all characters with the same characterType
-        List<Post_Entity> posts = postService.getAllPosts();                                            //I also think that this is wrong
-        for (Post_Entity post : posts) {
-            if(!post.getCharacterType().equalsIgnoreCase(characterType)){
-                posts.remove(post);
-            }
-        }
-        return ResponseEntity.ok(posts);
-    }
-
   @GetMapping("/search")
   public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
     List<Post_Entity> posts = postService.searchPosts(query);
