@@ -70,6 +70,7 @@ public class Post_APIController {
   }
 
   @GetMapping("/search")
+  //http:
   public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
     List<Post_Entity> posts = postService.searchPosts(query);
     return ResponseEntity.ok(posts);

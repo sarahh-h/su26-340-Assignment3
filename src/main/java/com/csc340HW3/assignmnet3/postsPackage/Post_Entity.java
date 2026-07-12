@@ -30,8 +30,11 @@ public class Post_Entity {
   @Column(nullable = false)   //NOT NULL
   private String name;         //name <- title
 
+  @Column(nullable = false)   //other aliases name attribute added
+  private String otherName;
+
   @Column(nullable = false, columnDefinition = "TEXT")
-  private String description; //description <- content
+  private String description; //description aka background story and personality <- content
 
   @Column(nullable = false)
   private String characterType;  //characterType <- author
@@ -42,11 +45,12 @@ public class Post_Entity {
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm")     //keeping time for fun
   private LocalDateTime createdAt;
 
-  public Post_Entity(String name, String description, String characterType, String universe) {
+  public Post_Entity(String name, String otherName, String description, String characterType, String universe) {
     this.name = name;
     this.characterType = characterType;
     this.description = description;
     this.universe = universe;
+    this.otherName = otherName;
   }
 
   @PrePersist
