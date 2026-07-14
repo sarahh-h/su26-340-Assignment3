@@ -18,9 +18,16 @@ public class CharacterUiController {            //ui will always return strings 
         this.pService = pService;
     }
 
+    @GetMapping
+    public String getAllPosts(Model model){
+        model.addAttribute("characterList", pService.getAllPosts());
+        model.addAttribute("pageTitle", "All characters");
+        return "index";
+    }
+
     @GetMapping("/about")   //when we go to about
     public String about(){
-    return "about";     //name of ui [webpage], it should be match a name in the template folder
+        return "about";     //name of ui [webpage], it should be match a name in the template folder
     }
 
     @GetMapping("/chars/{id}")
@@ -29,5 +36,12 @@ public class CharacterUiController {            //ui will always return strings 
         model.addAttribute("character", character);
         return "details";
     }
+
+    @GetMapping("/search")
+    public String searchPosts(String query, Model model) {
+        model.addAttribute("characterList", pService.searchPosts(query));
+        model.addAttribute("pageTitle", "Results for: " + query);
+        return "index";
+  }
     
 }
