@@ -16,7 +16,7 @@
       <div class="container-fluid">
     <a class="navbar-brand" style="font-size: 40px;" aria-disabled="true">
          Angry Birds List
-        <img src="redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
+        <img src="/redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
     </a>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;" >
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>

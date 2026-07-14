@@ -32,7 +32,7 @@
       <div class="container-fluid">
     <a class="navbar-brand" style="font-size: 40px;" aria-disabled="true">
          Angry Birds List
-        <img src="redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
+        <img src="/redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
     </a>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;" >
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -53,15 +53,14 @@
     <div class="container text-center" style="margin-bottom: 367px;">
   <div class="row">
     <div class="col">
-      <img src="redBird.png">
+      <img src="">
     </div>
     <div class="col" style="background-color: cornsilk;">
       <p class="MainTitle">Name: <span class="StandardText">${character.name}</span></p>
-      <p class="MainTitle">Other aliases: <span class="StandardText">Red Bird</span></p>
-      <p class="MainTitle">Apperances in the universe: <span class="StandardText">${character.description}</span></p>
-      <p class="MainTitle">Backstory and personality:  <span class="StandardText">The main and original character of the Angry Bird Universe. Was once care-free but now is the leader 
-        of the flock to protect the last 3 eggs they have--a role he doesn't take lightly. He is known for being short-tempered.</span></p>
-      <p class="MainTitle">Tag: <span class="badge rounded-pill text-bg-success">Birds</span> </p>
+      <p class="MainTitle">Other aliases: <span class="StandardText">${character.otherName}</span></p>
+      <p class="MainTitle">Apperances in the universe: <span class="StandardText">${character.universe}</span></p>
+      <p class="MainTitle">Backstory and personality:  <span class="StandardText">${character.description}</span></p>
+      <p class="MainTitle">Tag: <span class="badge rounded-pill text-bg-success">${character.characterType}</span> </p>
     </div>
   </div>
   <br><br> <!--for space at the bottom of the page-->

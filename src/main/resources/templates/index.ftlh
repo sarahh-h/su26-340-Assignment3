@@ -15,7 +15,7 @@
       <div class="container-fluid">
     <a class="navbar-brand" style="font-size: 40px;" aria-disabled="true">
          Angry Birds List
-        <img src="redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
+        <img src="/redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
     </a>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;" >
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -51,7 +51,7 @@
     <!--Red's card-->
   <div class="col">
     <div class="card border-warning mb-3 h-100">
-      <img src="redBird.png" class="card-img-top" alt="red bird from angry birds">
+      <img src="/redBird.png" class="card-img-top" alt="red bird from angry birds">
       <div class="card-body">
         <h5 class="card-title">Red <span class="badge rounded-pill text-bg-success">Birds</span> </h5>
         <p class="card-text">The lead character in the franchise. Leads the rest of the birds to defeat the pigs and get their eggs back.</p>
@@ -62,7 +62,7 @@
   <!--Chuck's card-->
   <div class="col">
     <div class="card border-warning mb-3 h-100">
-      <img src="chuck.png" class="card-img-top" alt="chuck also known as yellow bird">
+      <img src="/chuck.png" class="card-img-top" alt="chuck also known as yellow bird">
       <div class="card-body">
         <h5 class="card-title">Chuck <span class="badge rounded-pill text-bg-success">Birds</span> </h5>
         <p class="card-text">One of the main bird characters. Known for his speed and works along side Red.</p>
@@ -73,7 +73,7 @@
   <!--King pig's card-->
   <div class="col">
     <div class="card border-warning mb-3 h-100">
-      <img src="kingPing.png" class="card-img-top" alt="King of the Pigs">
+      <img src="/kingPing.png" class="card-img-top" alt="King of the Pigs">
       <div class="card-body">
         <h5 class="card-title">King Pig <span class="badge rounded-pill text-bg-danger">Pigs</span> </h5>
         <p class="card-text">The king of the pigs. Always trying to eat the birds' eggs and uses his subjects as a mean to get them.</p>
@@ -84,7 +84,7 @@
   <!--Moustache Pig's card-->
   <div class="col">
     <div class="card border-warning mb-3 h-100">
-      <img src="moustachePig.png" class="card-img-top" alt="pig with moustache">
+      <img src="/moustachePig.png" class="card-img-top" alt="pig with moustache">
       <div class="card-body">
         <h5 class="card-title">Moustache Pig <span class="badge rounded-pill text-bg-danger">Pigs</span> </h5>
         <p class="card-text">The king's right-hand. Scheming alongside him and carrying out the mission to steal the bird's eggs.<br><br></p> <!--adding two break lines because for some reason this one will not align with the others-->
@@ -95,7 +95,7 @@
   <!--Eggs's card-->
   <div class="col">
     <div class="card border-warning mb-3 h-100">
-      <img src="eggs.png" class="card-img-top" alt="the eggs">
+      <img src="/eggs.png" class="card-img-top" alt="the eggs">
       <div class="card-body">
         <h5 class="card-title">The Eggs <span class="badge rounded-pill text-bg-dark">Eggs</span> </h5>
         <p class="card-text">The Eggs are what the pigs want desperately and what the birds defend intensely. They're the offspring of the birds.</p>

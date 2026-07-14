@@ -11,5 +11,7 @@ public interface PostRepository extends JpaRepository<Post_Entity, Long> {
 
   List<Post_Entity> findByNameContainingIgnoreCase(String nameKeyword); 
 
+  List<Post_Entity> findByCharacterTypeContainingIgnoreCase(String charactertype);
+
 
 }

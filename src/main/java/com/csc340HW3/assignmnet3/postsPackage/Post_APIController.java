@@ -70,15 +70,22 @@ public class Post_APIController {
   }
 
   @GetMapping("/search")
-  //http:
+  //http:localhost:8080/api/posts/search?query=putSomethingHere
   public ResponseEntity<List<Post_Entity>> searchPosts(@RequestParam String query) {
     List<Post_Entity> posts = postService.searchPosts(query);
     return ResponseEntity.ok(posts);
   }
 
   @GetMapping("/name")
+  //http:localhost:8080/api/posts/name?name=putANameHere
   public ResponseEntity<List<Post_Entity>> getPostsByName(@RequestParam String name) {
     List<Post_Entity> posts = postService.getPostsByName(name);
+    return ResponseEntity.ok(posts);
+  }
+
+  @GetMapping("/characterType")
+  public ResponseEntity<List<Post_Entity>> getPostsByCharacterType(@RequestParam String type){
+    List<Post_Entity> posts = postService.getPostsByCharacterType(type);
     return ResponseEntity.ok(posts);
   }
 

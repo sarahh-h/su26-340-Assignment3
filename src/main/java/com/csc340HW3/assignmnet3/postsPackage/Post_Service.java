@@ -30,6 +30,7 @@ public class Post_Service {
       existingPost.setDescription(updatedPost.getDescription());
       existingPost.setCharacterType(updatedPost.getCharacterType());
       existingPost.setUniverse(updatedPost.getUniverse());
+      existingPost.setOtherName(updatedPost.getOtherName());
       return postRepository.save(existingPost);
     }
     return null;
@@ -49,6 +50,10 @@ public class Post_Service {
 
   public List<Post_Entity> getPostsByName(String n) {
     return postRepository.findByNameContainingIgnoreCase(n);
+  }
+
+  public List<Post_Entity> getPostsByCharacterType(String c){
+    return postRepository.findByCharacterTypeContainingIgnoreCase(c);
   }
 
 }

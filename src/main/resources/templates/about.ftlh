@@ -15,7 +15,7 @@
       <div class="container-fluid">
     <a class="navbar-brand" style="font-size: 40px;" aria-disabled="true">
          Angry Birds List
-        <img src="redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
+        <img src="/redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
     </a>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;" >
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -37,7 +37,7 @@
         <div class="container" style="padding-bottom: 140px">
             <table>
                 <tr>
-                    <th scope="col" style="padding-right: 30px; padding-left: 120px;"> <img src="aboutImage.jpg"></th>
+                    <th scope="col" style="padding-right: 30px; padding-left: 120px;"> <img src="/aboutImage.jpg"></th>
                     <th scope="col" style="padding-left: 90px;">
                         <div class="card text-center bg-transparent" style="border: unset; padding-bottom: 250px;">
                             <div class="card-header bg-transparent" style="height: 60px; font-size: 40px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: saddlebrown;">
