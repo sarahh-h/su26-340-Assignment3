@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 @RequestMapping("/posts")
@@ -30,10 +29,11 @@ public class CharacterUiController {            //ui will always return strings 
         return "about";     //name of ui [webpage], it should be match a name in the template folder
     }
 
-    @GetMapping("/chars/{id}")
+    @GetMapping("/{id}")
     public String getCharByID(@PathVariable long id, Model model){
         Post_Entity character = pService.getPostById(id);
         model.addAttribute("character", character);
+        //model.addAttribute("Character details", character);
         return "details";
     }
 
@@ -42,6 +42,22 @@ public class CharacterUiController {            //ui will always return strings 
         model.addAttribute("characterList", pService.searchPosts(query));
         model.addAttribute("pageTitle", "Results for: " + query);
         return "index";
+  }
+
+   @GetMapping("/new")
+  public String createPostForm(Model model) {
+    model.addAttribute("character", new Post_Entity());
+    model.addAttribute("pageTitle", "Create New Character");
+    return "new-character-form";
+  }
+
+  @PostMapping("/add")
+  public String createCharacter(Post_Entity post) {
+    Post_Entity createdChar = pService.createPost(post);
+    if (createdChar != null) {
+      return "redirect:/posts/chars/" + createdChar.getCharacterId();
+    }
+    return "redirect:/posts/new?error=true";
   }
     
 }

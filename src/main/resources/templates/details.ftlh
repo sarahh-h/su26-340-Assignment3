@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Angry Birds List</title>
+    <title>Details</title>
 
 <!--to have multiple text formattings in one <p>-->
     <style type="text/css">                         
@@ -35,16 +35,16 @@
         <img src="/redBird.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-bottom">
     </a>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;" >
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link active" aria-current="page" href="/posts/index">Home</a>
         </li>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;">
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="/posts/about">About</a>
         </li>
         <li class="nav-item dropdown" style= "list-style-type:none; font-size: 28px;">
-          <a class="nav-link" href="details.html">Details</a>
+          <a class="nav-link" href="/posts/chars{id}">Details</a>
         </li>
         <li class="nav-item" style= "list-style-type:none; font-size: 28px;">
-          <a class="nav-link" href="new-character-form.html">Add A Character</a>
+          <a class="nav-link" href="/posts/new-character-form">Add A Character</a>
         </li>     
      </div>  
     </nav>
